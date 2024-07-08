@@ -13,7 +13,10 @@ log = logging.getLogger(__file__)
 # shortcuts
 get_action = logic.get_action
 
+dcatapit_blp = Blueprint('dcatapit_blp', __name__)
 
+'''
+@blp.route("/DCATAPITApiController")
 class DCATAPITApiController(MethodView):
     methods = ['GET', ]
 
@@ -42,3 +45,4 @@ class DCATAPITApiController(MethodView):
         }
 
         return _finish(200, resultSet, 'json')
+'''
