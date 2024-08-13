@@ -9,6 +9,7 @@ from ckan.common import config
 from flask import Blueprint
 
 # from routes.mapper import SubMapper
+from ckanext.dcatapit.controllers.api import get_blueprints
 
 import ckanext.dcatapit.helpers as helpers
 import ckanext.dcatapit.interfaces as interfaces
@@ -81,8 +82,16 @@ class DCATAPITPackagePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm,
     '''
 
     #--------------IBlueprint -----------------#
- 
-    # +++++++++++
+    # from ckanext.dcatapit.controllers.api import dcatapit_blp
+    # from flask_smorest import Api
+
+    # ckan.config["api"] = "/util/vocabulary/autocomplete" 
+    # api = Api(ckan)
+    #api.register_blueprint(dcatapit_blp)
+
+
+    def get_blueprint(self):
+        return get_blueprints()
 
     # ------------- IConfigurer ---------------#
 
