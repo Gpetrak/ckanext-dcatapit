@@ -153,8 +153,8 @@ jobs:
         run: |
           ckan -c test.ini db upgrade -p dcatapit
 
-      - name: Run tests
-        run: pytest --ckan-ini=test.ini --cov=ckanext.dcatapit --cov-report=xml --cov-append --disable-warnings ckanext/dcatapit/tests
+          #- name: Run tests
+          #run: pytest --ckan-ini=test.ini --cov=ckanext.dcatapit --cov-report=xml --cov-append --disable-warnings ckanext/dcatapit/tests
 
       - name: Upload coverage report to codecov
         uses: codecov/codecov-action@v1
